@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #eef2ff;
+  color: #172554;
+}
+
+header {
+  background: linear-gradient(135deg, #312e81, #2563eb);
+  color: white;
+  text-align: center;
+  padding: 25px 12px;
+}
+
+header h1 {
+  margin: 0 0 10px;
+  font-size: 32px;
+}
+
+header p {
+  margin: 0;
+}
+
+.container {
+  width: 92%;
+  max-width: 620px;
+  margin: 28px auto;
+  min-height: 55vh;
+}
+
+.card {
+  background: white;
+  padding: 24px;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px #17255415;
+}
+
+h2 {
+  color: #3730a3;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 16px;
+  margin: 12px 0;
+}
+
+button {
+  width: 100%;
+  border: none;
+  background: #4338ca;
+  color: white;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+button:disabled {
+  opacity: 0.5;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.progress {
+  height: 8px;
+  background: #e0e7ff;
+  border-radius: 20px;
+  margin: 18px 0;
+  overflow: hidden;
+}
+
+#progressFill {
+  height: 100%;
+  width: 0;
+  background: #4f46e5;
+  transition: width 0.3s;
+}
+
+#options {
+  display: grid;
+  gap: 10px;
+}
+
+.option {
+  margin: 0;
+  background: white;
+  color: #172554;
+  border: 1px solid #cbd5e1;
+  text-align: left;
+}
+
+.option.correct {
+  background: #dcfce7;
+  border-color: #16a34a;
+}
+
+.option.wrong {
+  background: #fee2e2;
+  border-color: #dc2626;
+}
+
+#feedback {
+  min-height: 20px;
+  font-weight: bold;
+}
+
+.certificate {
+  border: 8px double #c49a32;
+  background: #fffdf3;
+  padding: 25px 12px;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.brand {
+  color: #4338ca;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+.certificate h1 {
+  color: #a67c20;
+  font-size: 27px;
+}
+
+#certName {
+  color: #312e81;
+  overflow-wrap: anywhere;
+}
+
+.footerCert {
+  border-top: 1px solid #c49a32;
+  padding-top: 12px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 8px;
+  color: #64748b;
+}
+
+@media print {
+  @page {
+    size: landscape;
+    margin: 10mm;
+  }
+
+  body {
+    background: white;
+  }
+
+  header, footer, #home, #quiz,
+  #result > h2, #result > p,
+  #result > button, #certificate > button {
+    display: none !important;
+  }
+
+  .container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  #result, #certificate {
+    display: block !important;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+  }
+
+  .certificate {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
