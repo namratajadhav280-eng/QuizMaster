@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuizMaster | Quiz & Certificate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🎓 QuizMaster</h1>
+    <p>Test Your Skills. Earn Your Certificate.</p>
+  </header>
+
+  <main class="container">
+    <section id="home" class="card">
+      <h2>Welcome to QuizMaster!</h2>
+      <p>Solve 10 questions and score at least 80% to earn your certificate.</p>
+      <input id="studentName" type="text" placeholder="Enter your full name" maxlength="60">
+      <button onclick="startQuiz()">Start Quiz 🚀</button>
+    </section>
+
+    <section id="quiz" class="card hidden">
+      <div class="info">
+        <span id="questionNo"></span>
+        <span id="score">Score: 0</span>
+      </div>
+      <div class="progress"><div id="progressFill"></div></div>
+      <h2 id="question"></h2>
+      <div id="options"></div>
+      <p id="feedback"></p>
+      <button id="next" onclick="nextQuestion()" disabled>Next Question →</button>
+    </section>
+
+    <section id="result" class="card hidden">
+      <h2>Quiz Completed! 🎉</h2>
+      <p id="studentResult"></p>
+      <h1 id="finalScore"></h1>
+      <p id="message"></p>
+
+      <div id="certificate" class="hidden">
+        <div class="certificate">
+          <p class="brand">QUIZMASTER</p>
+          <h1>Certificate of Achievement</h1>
+          <p>This certificate is presented to</p>
+          <h2 id="certName"></h2>
+          <p>for completing the IT & Computer Basics Quiz</p>
+          <h2 id="certScore"></h2>
+          <p id="certDate"></p>
+          <p class="footerCert">Keep Learning. Keep Growing.</p>
+        </div>
+        <button onclick="window.print()">Print / Save as PDF</button>
+      </div>
+
+      <button onclick="restartQuiz()">Try Again</button>
+    </section>
+  </main>
+
+  <footer>© 2026 QuizMaster | Learn • Test • Achieve</footer>
+  <script src="script.js"></script>
+</body>
+</html>
